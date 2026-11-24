@@ -5,7 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#0b5d43">
 <meta name="description" content="Temukan jasa lokal di Aceh: servis AC, kelistrikan, kebersihan rumah, servis motor panggilan, plumbing, dan lainnya. Pesan lewat WhatsApp.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="id_ID">
+<meta property="og:title" content="JasaGeutanyou — Temukan Jasa Lokal di Aceh">
+<meta property="og:description" content="Temukan jasa lokal di Aceh: servis AC, kelistrikan, kebersihan rumah, servis motor panggilan, plumbing, dan lainnya. Pesan lewat WhatsApp.">
+<meta property="og:image" content="assets/images/ilustrasi-layanan.png">
+<meta name="twitter:card" content="summary_large_image">
 <title>JasaGeutanyou — Temukan Jasa Lokal di Aceh</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='12' fill='%230b5d43'/%3E%3Cpath d='M20 8a8.5 8.5 0 0 0-8.5 8.5C11.5 24 20 32 20 32s8.5-8 8.5-15.5A8.5 8.5 0 0 0 20 8z' fill='%23fff'/%3E%3Cpath d='M15.5 17l3 3 6-6.5' fill='none' stroke='%230b5d43' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='31' cy='9' r='3.4' fill='%23f2b705'/%3E%3C/svg%3E">
+<!-- TODO(security): Saat publikasi ke hosting, tambahkan header HTTP Content-Security-Policy ketat (tanpa unsafe-inline), X-Frame-Options: DENY, dan X-Content-Type-Options: nosniff, serta pertimbangkan self-host font. -->
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -24,7 +32,7 @@ h2{font-size:clamp(34px,4.6vw,56px)}.acc{color:var(--acc)}
 header{position:sticky;top:0;z-index:30;background:rgba(255,255,255,.94);backdrop-filter:blur(10px);box-shadow:0 1px 0 #e6eee9}
 .nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
 .brand{display:flex;align-items:center;gap:10px;font:800 27px 'Barlow Condensed',sans-serif;text-transform:uppercase;letter-spacing:.01em}.brand b{color:var(--acc)}.brand svg{width:38px;height:38px}
-.links{display:flex;gap:32px;font-weight:600;font-size:15px}.links a:hover{color:var(--acc)}
+.links{display:flex;gap:32px;font-weight:600;font-size:15px}.links a:hover{color:var(--acc)}.nav-m-btn{display:none}
 .menu{display:none;background:var(--mint);border:0;border-radius:12px;width:44px;height:44px;place-items:center}
 .hero{position:relative;overflow:hidden;background:linear-gradient(115deg,#fff 30%,#f1f6f2)}
 .blob{position:absolute;right:-9%;top:-16%;width:min(62vw,780px);aspect-ratio:1;border-radius:50%;background:var(--grad)}
@@ -52,7 +60,7 @@ section{padding:88px 0}
 .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
 .card{background:#fff;border-radius:28px;display:flex;flex-direction:column;transition:.2s;box-shadow:var(--sh);padding:12px}.card:hover{transform:translateY(-5px)}
 .card .art{aspect-ratio:16/10}
-.tag{position:absolute;left:12px;top:12px;background:#fff;border-radius:99px;padding:3px 12px;font-size:12px;font-weight:700;box-shadow:0 2px 8px #0002}.demo{left:auto;right:12px;background:var(--sun)}
+.tag{position:absolute;left:12px;top:12px;background:#fff;border-radius:99px;padding:3px 12px;font-size:12px;font-weight:700;box-shadow:0 2px 8px #0002}
 .card-b{padding:16px 10px 8px;display:flex;flex-direction:column;gap:8px;flex:1}.card-b h3{font-size:27px}.card-b p{color:var(--mut);font-size:15px;flex:1}
 .loc{font-size:14px;font-weight:600;color:var(--acc)}
 .card-f{display:flex;justify-content:space-between;align-items:center;gap:10px;border-top:1.5px dashed #d5e2da;padding-top:14px;margin-top:6px}.card-f small{display:block;color:var(--mut);font-size:12px;line-height:1.3}.card-f b{font-size:15px}
@@ -72,7 +80,7 @@ section{padding:88px 0}
 .faq summary{font-weight:700;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:14px}.faq summary:after{content:"+";font-size:24px;line-height:1;color:var(--acc)}.faq details[open] summary:after{content:"–"}.faq details p{color:var(--mut);margin-top:10px}
 footer{background:#0a3d2e;color:#cfe4d8;padding:62px 0 26px}
 .foot{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:40px;padding-bottom:36px}.foot .brand{color:#fff}.foot .brand b{color:var(--sun)}.foot p{margin-top:14px;max-width:340px;font-size:15px}
-.foot h4{color:#fff;font-size:14px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:14px}.foot a,.foot span{display:block;margin:8px 0;font-size:15px}.foot a:hover{color:var(--sun)}
+.foot h4{color:#fff;font-size:14px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:14px}.foot a,.foot span{display:block;margin:8px 0;font-size:15px}.foot a:hover{color:var(--sun)}.foot span a{display:inline;margin:0;text-decoration:underline;text-underline-offset:3px}
 .copy{border-top:1px solid #ffffff30;padding-top:20px;font-size:14px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
 .modal{position:fixed;inset:0;background:#0a1f18cc;z-index:60;display:none;align-items:center;justify-content:center;padding:18px}.modal.show{display:flex}
 .box{background:#fff;border-radius:30px;width:min(580px,100%);max-height:92vh;overflow:auto;position:relative;padding:12px}
@@ -83,7 +91,7 @@ footer{background:#0a3d2e;color:#cfe4d8;padding:62px 0 26px}
 .acts{display:flex;gap:10px;flex-wrap:wrap}.acts .btn{flex:1}
 .toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,30px);opacity:0;pointer-events:none;background:var(--ink);color:#fff;padding:13px 20px;border-radius:14px;max-width:min(92vw,460px);font-size:14px;z-index:90;transition:.25s}.toast.show{opacity:1;transform:translate(-50%,0)}
 @media(max-width:960px){.hero-grid,.about-g{grid-template-columns:1fr}.cats,.grid{grid-template-columns:repeat(2,1fr)}.blob{width:90vw;top:auto;bottom:-30%;right:-30%}.steps{gap:24px}}
-@media(max-width:700px){.nav>.btn{display:none}.menu{display:grid}.links{display:none;position:absolute;top:76px;left:0;right:0;background:#fff;box-shadow:0 12px 20px #0002;padding:20px;flex-direction:column;gap:16px}.links.open{display:flex}
+@media(max-width:700px){.nav>.btn{display:none}.menu{display:grid}.links{display:none;position:absolute;top:76px;left:0;right:0;background:#fff;box-shadow:0 12px 20px #0002;padding:20px;flex-direction:column;gap:16px}.links.open{display:flex}.nav-m-btn{display:inline-flex;width:100%}
 .search{grid-template-columns:1fr;border-radius:26px;padding:8px}.search select{border-left:0;border-top:1.5px solid #e1ebe5}section{padding:60px 0}.hero-grid{padding:40px 0 60px}
 .cats,.grid,.steps,.foot{grid-template-columns:1fr}.count{margin-left:0;width:100%}.tools select,.tools input{width:100%}.info{grid-template-columns:1fr}.circ:before{inset:-6% 18% 18% -14%}}
 </style>
@@ -91,9 +99,9 @@ footer{background:#0a3d2e;color:#cfe4d8;padding:62px 0 26px}
 <body>
 <header><div class="w nav">
   <a class="brand" href="#beranda" aria-label="JasaGeutanyou"><svg viewBox="0 0 40 40"><rect width="40" height="40" rx="12" fill="#0b5d43"/><path d="M20 8a8.5 8.5 0 0 0-8.5 8.5C11.5 24 20 32 20 32s8.5-8 8.5-15.5A8.5 8.5 0 0 0 20 8z" fill="#fff"/><path d="M15.5 17l3 3 6-6.5" fill="none" stroke="#0b5d43" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="31" cy="9" r="3.4" fill="#f2b705"/></svg><span>Jasa<b>Geutanyou</b></span></a>
-  <nav class="links" id="links"><a href="#beranda">Beranda</a><a href="#jelajahi">Jelajahi Jasa</a><a href="#cara-kerja">Cara Kerja</a><a href="#tentang">Tentang Kami</a></nav>
-  <button class="btn" onclick="partner()">Daftar sebagai Mitra</button>
-  <button class="menu" id="menu" aria-label="Buka menu"><svg width="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+  <nav class="links" id="links"><a href="#beranda">Beranda</a><a href="#jelajahi">Jelajahi Jasa</a><a href="#cara-kerja">Cara Kerja</a><a href="#tentang">Tentang Kami</a><button class="btn nav-m-btn" type="button" data-partner>Daftar sebagai Mitra</button></nav>
+  <button class="btn" type="button" data-partner>Daftar sebagai Mitra</button>
+  <button class="menu" id="menu" type="button" aria-label="Buka menu" aria-expanded="false" aria-controls="links"><svg width="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
 </div></header>
 
 <main>
@@ -118,7 +126,7 @@ footer{background:#0a3d2e;color:#cfe4d8;padding:62px 0 26px}
 </div></section>
 
 <section class="catalog" id="jelajahi"><div class="w">
-  <div class="head"><div class="kick">Daftar penyedia jasa</div><h2>Jelajahi jasa <span class="acc">di sekitar Anda</span></h2><p>Data di bawah adalah contoh tampilan, bukan mitra asli JasaGeutanyou.</p></div>
+  <div class="head"><div class="kick">Daftar penyedia jasa</div><h2>Jelajahi jasa <span class="acc">di sekitar Anda</span></h2><p>Temukan penyedia jasa sesuai kebutuhan dan wilayah Anda di Aceh.</p></div>
   <div class="tools"><input id="q" placeholder="Cari nama, layanan, atau wilayah" aria-label="Cari"><select id="cf" aria-label="Kategori"><option value="all">Semua kategori</option></select><select id="lf" aria-label="Lokasi"></select><span class="count" id="count"></span></div>
   <div class="grid" id="grid"></div>
 </div></section>
@@ -137,14 +145,14 @@ footer{background:#0a3d2e;color:#cfe4d8;padding:62px 0 26px}
   <div><div class="kick">Tentang JasaGeutanyou</div><h2>Jasa lokal jadi <span class="acc">lebih mudah ditemukan</span></h2>
     <p>“Geutanyoe” berarti “kita” dalam bahasa Aceh. JasaGeutanyou hadir untuk mempermudah masyarakat menemukan layanan lokal, sekaligus membantu penyedia jasa menjangkau pelanggan baru di sekitarnya.</p>
     <ul><li>Masyarakat: cari jasa dan hubungi penyedia tanpa proses berbelit.</li><li>Penyedia jasa: perkenalkan layanan dan terima pesanan lewat WhatsApp.</li></ul>
-    <button class="btn" onclick="partner()">Daftar sebagai Mitra</button></div>
+    <button class="btn" type="button" data-partner>Daftar sebagai Mitra</button></div>
 </div></section>
 
 <section style="padding-top:20px"><div class="w"><div class="head" style="margin-bottom:30px"><div class="kick">Pertanyaan umum</div><h2>Sebelum <span class="acc">mulai</span></h2></div>
   <div class="faq">
     <details><summary>Apakah harus membuat akun?</summary><p>Tidak. Anda bisa menelusuri katalog dan menghubungi penyedia jasa tanpa akun.</p></details>
     <details><summary>Bagaimana dengan harga dan pembayaran?</summary><p>Harga akhir dan pembayaran disepakati langsung dengan penyedia jasa melalui WhatsApp. Website ini belum memproses pembayaran.</p></details>
-    <details><summary>Apakah penyedia jasa di sini asli?</summary><p>Saat ini daftar yang tampil adalah data contoh untuk pratinjau dan ditandai “Contoh”.</p></details>
+    <details><summary>Bagaimana cara mendaftar sebagai mitra penyedia jasa?</summary><p>Klik tombol “Daftar sebagai Mitra” untuk menghubungi tim JasaGeutanyou melalui WhatsApp dan mengirimkan informasi layanan serta wilayah kerja Anda.</p></details>
   </div></div></section>
 </main>
 
@@ -158,17 +166,17 @@ footer{background:#0a3d2e;color:#cfe4d8;padding:62px 0 26px}
 </div></footer>
 
 <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="mTitle"><div class="box">
-  <button class="x" id="close" aria-label="Tutup">×</button>
+  <button class="x" id="close" type="button" aria-label="Tutup">×</button>
   <div class="art" id="mArt"></div>
   <div class="box-b"><div class="kick" id="mCat"></div><h3 id="mTitle"></h3><p id="mDesc" style="color:var(--mut)"></p>
-    <div class="info"><div>Lokasi layanan<b id="mLoc"></b></div><div>Kisaran harga (contoh)<b id="mPrice"></b></div><div>Jam operasional<b id="mHours"></b></div><div>Status data<b>Contoh, bukan mitra asli</b></div></div>
-    <div class="acts"><button class="btn" id="mWa">Pesan via WhatsApp</button><button class="btn out" id="mClose">Tutup</button></div>
+    <div class="info"><div>Lokasi layanan<b id="mLoc"></b></div><div>Kisaran harga<b id="mPrice"></b></div><div>Jam operasional<b id="mHours"></b></div><div>Layanan utama<b id="mSvc"></b></div></div>
+    <div class="acts"><button class="btn" id="mWa" type="button">Pesan via WhatsApp</button><button class="btn out" id="mClose" type="button">Tutup</button></div>
     <div class="note warn" id="mWarn" hidden>Nomor WhatsApp penyedia ini belum dikonfigurasi, jadi tombol belum bisa membuka chat.</div>
   </div></div></div>
-<div class="toast" id="toast"></div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
 <script>
 // ---- KONFIGURASI: isi dengan nomor asli (format 62812xxxxxxx, tanpa +, spasi, atau strip) ----
-const CONFIG={wa:'',email:''};
+const CONFIG={wa:'628978882310',email:''};
 const LOCS=['Banda Aceh','Aceh Besar','Lhokseumawe','Langsa','Bireuen','Pidie','Aceh Utara'];
 const img=n=>`url(assets/images/${n}.svg) center/cover`,png='url(assets/images/ilustrasi-layanan.png)';
 const CATS=[
@@ -178,7 +186,7 @@ const CATS=[
 {id:'motor',name:'Servis Motor Panggilan',sub:'Datang ke lokasi Anda',bg:img('motor')},
 {id:'plumbing',name:'Plumbing & Perbaikan Pipa',sub:'Keran, saluran, kebocoran',bg:img('pipa')},
 {id:'other',name:'Jasa Lainnya',sub:'Beragam kebutuhan rumah',bg:img('lainnya')}];
-// Data CONTOH untuk tampilan. Ganti dengan data mitra terverifikasi dan isi "wa".
+// Ganti dengan data mitra terverifikasi dan isi properti "wa" tiap mitra.
 const P=[
 {n:'Sejuk Teknik AC',c:'ac',l:'Banda Aceh',d:'Kuta Alam',t:'Melayani cuci AC, pengecekan, perawatan berkala, dan perbaikan untuk rumah maupun kantor.',s:'Cuci AC, perbaikan, isi freon',p:'Rp 75.000 – 150.000 / unit',h:'Senin–Sabtu, 08.00–17.00',wa:''},
 {n:'Bersih Rumah Kita',c:'clean',l:'Aceh Besar',d:'Darul Imarah',t:'Kebersihan rumah, kos, dan ruang usaha. Cakupan kerja bisa dibicarakan lebih dulu.',s:'General cleaning, kamar mandi, dapur',p:'Rp 150.000 – 350.000 / kunjungan',h:'Setiap hari, 08.00–16.00',wa:''},
@@ -189,35 +197,116 @@ const P=[
 {n:'Bersih Nyaman Langsa',c:'clean',l:'Langsa',d:'Langsa Kota',t:'Jasa kebersihan rumah dan ruang kerja dengan paket yang bisa disesuaikan.',s:'Bersih rumah, ruang kerja, kaca',p:'Rp 120.000 – 300.000',h:'Setiap hari, 08.00–16.00',wa:''},
 {n:'Teknik Listrik Pidie',c:'electric',l:'Pidie',d:'Sigli',t:'Perbaikan kelistrikan rumah, pemasangan perangkat, dan pemeriksaan instalasi dasar.',s:'Perbaikan, instalasi, penerangan',p:'Rp 50.000 – 180.000',h:'Senin–Sabtu, 08.00–17.00',wa:''}];
 const $=id=>document.getElementById(id),cat=id=>CATS.find(c=>c.id===id);
-const opt=(a,all)=>`<option value="all">${all}</option>`+a.map(x=>`<option>${x}</option>`).join('');
-$('hl').innerHTML=opt(LOCS,'Semua wilayah Aceh');$('lf').innerHTML=opt(LOCS,'Semua wilayah Aceh');
-$('cf').insertAdjacentHTML('beforeend',CATS.map(c=>`<option value="${c.id}">${c.name}</option>`).join(''));
-$('cats').innerHTML=CATS.map(c=>`<button class="cat" data-c="${c.id}"><div class="art" style="background:${c.bg} no-repeat"></div><div class="cat-b"><div><h3>${c.name}</h3><small>${c.sub}</small></div><span class="go">→</span></div></button>`).join('');
+const cleanWa=v=>String(v||'').trim(),validWa=v=>/^\d{8,15}$/.test(cleanWa(v));
+const cleanMail=v=>String(v||'').trim(),validMail=v=>/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(cleanMail(v));
+function el(tag,props,...kids){
+  const node=document.createElement(tag);
+  if(props)for(const[k,v]of Object.entries(props)){
+    if(k==='class')node.className=v;
+    else if(k==='style')node.style.cssText=v;
+    else if(k==='on')for(const[ev,fn]of Object.entries(v))node.addEventListener(ev,fn);
+    else if(k==='data')for(const[dk,dv]of Object.entries(v))node.dataset[dk]=dv;
+    else node.setAttribute(k,v);
+  }
+  for(const k of kids)if(k!=null)node.append(typeof k==='string'?document.createTextNode(k):k);
+  return node;
+}
+function fillLocs(select){
+  select.replaceChildren(el('option',{value:'all'},'Semua wilayah Aceh'),...LOCS.map(x=>el('option',{value:x},x)));
+}
+fillLocs($('hl'));fillLocs($('lf'));
+CATS.forEach(c=>$('cf').appendChild(el('option',{value:c.id},c.name)));
+$('cats').replaceChildren(...CATS.map(c=>el('button',{class:'cat',type:'button','aria-pressed':'false',data:{c:c.id},on:{click:()=>{$('cf').value=$('cf').value===c.id?'all':c.id;render();go()}}},
+  el('div',{class:'art',style:`background:${c.bg} no-repeat`}),
+  el('div',{class:'cat-b'},el('div',null,el('h3',null,c.name),el('small',null,c.sub)),el('span',{class:'go','aria-hidden':'true'},'→'))
+)));
 function render(){
   const q=$('q').value.trim().toLowerCase(),cf=$('cf').value,lf=$('lf').value;
   const r=P.map((p,i)=>({...p,i})).filter(p=>(cf==='all'||p.c===cf)&&(lf==='all'||p.l===lf)&&(!q||[p.n,p.t,p.l,p.d,p.s,cat(p.c).name].join(' ').toLowerCase().includes(q)));
-  $('count').textContent=`${r.length} contoh jasa`;
-  $('grid').innerHTML=r.length?r.map(p=>`<article class="card"><div class="art" style="background:${cat(p.c).bg} no-repeat"><span class="tag">${cat(p.c).name}</span><span class="tag demo">Contoh</span></div><div class="card-b"><div class="loc">📍 ${p.d}, ${p.l}</div><h3>${p.n}</h3><p>${p.t}</p><div class="card-f"><div><small>Kisaran harga</small><b>${p.p}</b></div><button class="btn" onclick="openP(${p.i})">Lihat Detail</button></div></div></article>`).join(''):`<div class="empty"><b>Jasa belum ditemukan</b>Coba ubah kata kunci, kategori, atau wilayah.<br><br><button class="btn" onclick="reset()">Reset pencarian</button></div>`;
-  document.querySelectorAll('.cat').forEach(e=>e.classList.toggle('on',e.dataset.c===cf));
+  $('count').textContent=`${r.length} penyedia jasa`;
+  if(r.length){
+    $('grid').replaceChildren(...r.map(p=>{
+      const c=cat(p.c);
+      return el('article',{class:'card'},
+        el('div',{class:'art',style:`background:${c.bg} no-repeat`},el('span',{class:'tag'},c.name)),
+        el('div',{class:'card-b'},
+          el('div',{class:'loc'},`📍 ${p.d}, ${p.l}`),
+          el('h3',null,p.n),
+          el('p',null,p.t),
+          el('div',{class:'card-f'},
+            el('div',null,el('small',null,'Kisaran harga'),el('b',null,p.p)),
+            el('button',{class:'btn',type:'button',on:{click:()=>openP(p.i)}},'Lihat Detail')
+          )
+        )
+      );
+    }));
+  }else{
+    $('grid').replaceChildren(el('div',{class:'empty'},
+      el('b',null,'Jasa belum ditemukan'),
+      el('p',{style:'margin-bottom:18px'},'Coba ubah kata kunci, kategori, atau wilayah.'),
+      el('button',{class:'btn',type:'button',on:{click:reset}},'Reset pencarian')
+    ));
+  }
+  document.querySelectorAll('.cat').forEach(e=>{const on=e.dataset.c===cf;e.classList.toggle('on',on);e.setAttribute('aria-pressed',String(on))});
 }
 function reset(){$('q').value='';$('cf').value='all';$('lf').value='all';render()}
 const go=()=>$('jelajahi').scrollIntoView({behavior:'smooth'});
-document.querySelectorAll('.cat').forEach(e=>e.onclick=()=>{$('cf').value=e.dataset.c;render();go()});
 ['q','cf','lf'].forEach(id=>$(id).addEventListener(id==='q'?'input':'change',render));
-$('heroForm').onsubmit=e=>{e.preventDefault();$('q').value=$('hq').value;$('lf').value=$('hl').value;render();go()};
-let cur=null;
-function openP(i){cur=P[i];const c=cat(cur.c);$('mArt').style.background=c.bg+' no-repeat';$('mCat').textContent=c.name;$('mTitle').textContent=cur.n;$('mDesc').textContent=cur.t+' Layanan: '+cur.s+'.';$('mLoc').textContent=cur.d+', '+cur.l;$('mPrice').textContent=cur.p;$('mHours').textContent=cur.h;$('mWarn').hidden=!!cur.wa;$('modal').classList.add('show');document.body.style.overflow='hidden'}
-function closeM(){$('modal').classList.remove('show');document.body.style.overflow=''}
-$('close').onclick=$('mClose').onclick=closeM;$('modal').onclick=e=>{if(e.target.id==='modal')closeM()};document.onkeydown=e=>{if(e.key==='Escape')closeM()};
+$('heroForm').addEventListener('submit',e=>{e.preventDefault();$('q').value=$('hq').value;$('lf').value=$('hl').value;render();go()});
+let cur=null,lastFocus=null;
+function openP(i){
+  cur=P[i];lastFocus=document.activeElement;const c=cat(cur.c);
+  $('mArt').style.background=c.bg+' no-repeat';
+  $('mCat').textContent=c.name;$('mTitle').textContent=cur.n;$('mDesc').textContent=cur.t;
+  $('mLoc').textContent=`${cur.d}, ${cur.l}`;$('mPrice').textContent=cur.p;$('mHours').textContent=cur.h;$('mSvc').textContent=cur.s;
+  $('mWarn').hidden=validWa(cur.wa);
+  $('modal').classList.add('show');document.body.style.overflow='hidden';$('close').focus();
+}
+function closeM(){
+  if(!$('modal').classList.contains('show'))return;
+  $('modal').classList.remove('show');document.body.style.overflow='';
+  if(lastFocus&&typeof lastFocus.focus==='function')lastFocus.focus();
+}
+$('close').addEventListener('click',closeM);$('mClose').addEventListener('click',closeM);
+$('modal').addEventListener('click',e=>{if(e.target.id==='modal')closeM()});
+document.addEventListener('keydown',e=>{
+  if(!$('modal').classList.contains('show'))return;
+  if(e.key==='Escape'){closeM();return}
+  if(e.key==='Tab'){
+    const f=[...$('modal').querySelectorAll('button:not([disabled]),[href],input,select,textarea,[tabindex]:not([tabindex="-1"])')];
+    if(!f.length)return;
+    const first=f[0],last=f[f.length-1];
+    if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus()}
+    else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus()}
+  }
+});
 function toast(m){const t=$('toast');t.textContent=m;t.classList.add('show');clearTimeout(t._h);t._h=setTimeout(()=>t.classList.remove('show'),3800)}
-$('mWa').onclick=()=>{if(!cur.wa){$('mWarn').hidden=false;toast('Nomor WhatsApp belum dikonfigurasi untuk data contoh ini.');return}
+$('mWa').addEventListener('click',()=>{
+  if(!cur||!validWa(cur.wa)){$('mWarn').hidden=false;toast('Nomor WhatsApp penyedia jasa ini belum tersedia.');return}
   const m=`Halo ${cur.n}, saya menemukan layanan ${cat(cur.c).name} (lokasi: ${cur.d}, ${cur.l}) melalui JasaGeutanyou. Saya ingin menanyakan jadwal dan estimasi biaya. Terima kasih.`;
-  window.open(`https://wa.me/${cur.wa}?text=${encodeURIComponent(m)}`,'_blank','noopener')};
-function partner(){if(!CONFIG.wa){toast('Nomor WhatsApp pendaftaran mitra belum dikonfigurasi. Isi CONFIG.wa di index.html.');return}
-  window.open(`https://wa.me/${CONFIG.wa}?text=${encodeURIComponent('Halo JasaGeutanyou, saya tertarik mendaftar sebagai mitra penyedia jasa.')}`,'_blank','noopener')}
-$('fWa').textContent='WhatsApp: '+(CONFIG.wa?'+'+CONFIG.wa:'segera tersedia');$('fMail').textContent='Email: '+(CONFIG.email||'segera tersedia');
-$('menu').onclick=()=>$('links').classList.toggle('open');document.querySelectorAll('.links a').forEach(a=>a.onclick=()=>$('links').classList.remove('open'));
-render();
+  window.open(`https://wa.me/${cleanWa(cur.wa)}?text=${encodeURIComponent(m)}`,'_blank','noopener,noreferrer');
+});
+function partner(){
+  closeNav();
+  if(!validWa(CONFIG.wa)){toast('Nomor WhatsApp pendaftaran mitra belum dikonfigurasi. Isi CONFIG.wa di index.html.');return}
+  window.open(`https://wa.me/${cleanWa(CONFIG.wa)}?text=${encodeURIComponent('Halo JasaGeutanyou, saya tertarik mendaftar sebagai mitra penyedia jasa.')}`,'_blank','noopener,noreferrer');
+}
+document.querySelectorAll('[data-partner]').forEach(b=>b.addEventListener('click',partner));
+function renderContact(){
+  const fWa=$('fWa'),fMail=$('fMail');
+  if(validWa(CONFIG.wa)){
+    const wa=cleanWa(CONFIG.wa);
+    fWa.replaceChildren('WhatsApp: ',el('a',{href:`https://wa.me/${wa}`,target:'_blank',rel:'noopener noreferrer'},`+${wa}`));
+  }else fWa.textContent='WhatsApp: segera tersedia';
+  if(validMail(CONFIG.email)){
+    const mail=cleanMail(CONFIG.email);
+    fMail.replaceChildren('Email: ',el('a',{href:`mailto:${mail}`},mail));
+  }else fMail.textContent='Email: segera tersedia';
+}
+function closeNav(){$('links').classList.remove('open');$('menu').setAttribute('aria-expanded','false')}
+$('menu').addEventListener('click',()=>{const open=$('links').classList.toggle('open');$('menu').setAttribute('aria-expanded',String(open))});
+document.querySelectorAll('.links a').forEach(a=>a.addEventListener('click',closeNav));
+renderContact();render();
 </script>
 </body>
 </html>
