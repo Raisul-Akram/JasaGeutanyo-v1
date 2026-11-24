@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0b5d43">
+<meta name="description" content="Temukan jasa lokal di Aceh: servis AC, kelistrikan, kebersihan rumah, servis motor panggilan, plumbing, dan lainnya. Pesan lewat WhatsApp.">
+<title>JasaGeutanyou — Temukan Jasa Lokal di Aceh</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* Ganti --acc / --grad untuk mengubah warna aksen (mis. oranye-merah seperti referensi) */
+:root{--g:#0b5d43;--acc:#0e8a4f;--sun:#f2b705;--mint:#eef5f0;--ink:#10201a;--mut:#5b6d65;--grad:linear-gradient(145deg,#f2b705 0%,#3dbb72 46%,#0b6b4a 100%);--sh:0 12px 34px rgba(16,32,26,.1)}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{font:16px/1.65 Figtree,system-ui,sans-serif;color:var(--ink);background:#fff;overflow-x:hidden}
+img{display:block;max-width:100%}a{color:inherit;text-decoration:none}button,input,select{font:inherit;color:inherit}button{cursor:pointer}
+.w{width:min(1180px,100% - 40px);margin:auto}
+h1,h2,h3{font-family:'Barlow Condensed','Arial Narrow',Impact,sans-serif;font-weight:800;text-transform:uppercase;line-height:1;letter-spacing:.005em}
+h2{font-size:clamp(34px,4.6vw,56px)}.acc{color:var(--acc)}
+.kick{font-size:13px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--acc)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:linear-gradient(135deg,#12a05f,#0b6b4a);color:#fff;border:0;border-radius:999px;padding:13px 28px;font-weight:700;font-size:15px;box-shadow:0 8px 20px rgba(14,138,79,.3);transition:.2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(14,138,79,.38)}.btn.sun{background:var(--sun);color:var(--ink);box-shadow:0 8px 20px rgba(242,183,5,.35)}.btn.out{background:#fff;color:var(--ink);box-shadow:inset 0 0 0 1.5px #cfdcd3}
+header{position:sticky;top:0;z-index:30;background:rgba(255,255,255,.94);backdrop-filter:blur(10px);box-shadow:0 1px 0 #e6eee9}
+.nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{display:flex;align-items:center;gap:10px;font:800 27px 'Barlow Condensed',sans-serif;text-transform:uppercase;letter-spacing:.01em}.brand b{color:var(--acc)}.brand svg{width:38px;height:38px}
+.links{display:flex;gap:32px;font-weight:600;font-size:15px}.links a:hover{color:var(--acc)}
+.menu{display:none;background:var(--mint);border:0;border-radius:12px;width:44px;height:44px;place-items:center}
+.hero{position:relative;overflow:hidden;background:linear-gradient(115deg,#fff 30%,#f1f6f2)}
+.blob{position:absolute;right:-9%;top:-16%;width:min(62vw,780px);aspect-ratio:1;border-radius:50%;background:var(--grad)}
+.hero-grid{position:relative;display:grid;grid-template-columns:1fr 1.05fr;gap:30px;align-items:center;padding:64px 0 90px}
+.hero h1{font-size:clamp(50px,7vw,100px);margin:14px 0 22px}
+.lead{font-size:18px;color:var(--mut);max-width:480px}
+.search{display:grid;grid-template-columns:1.4fr 1fr auto;gap:4px;align-items:center;background:#fff;border-radius:999px;box-shadow:var(--sh);padding:7px 7px 7px 14px;margin-top:30px;max-width:640px}
+.search input,.search select{border:0;outline:0;background:none;padding:12px 10px;min-width:0;width:100%;font-size:15px}.search select{border-left:1.5px solid #e1ebe5;cursor:pointer}
+.checks{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:22px;font-size:14px;font-weight:600;color:var(--g)}.checks span:before{content:"✓";display:inline-grid;place-items:center;width:20px;height:20px;margin-right:7px;border-radius:50%;background:var(--sun);color:var(--ink);font-size:12px}
+.hero-img{position:relative}
+.hero-img img{width:100%;height:auto;aspect-ratio:1200/630;object-fit:cover;background:#fff;border-radius:50%;box-shadow:0 24px 60px rgba(8,50,36,.28)}
+.hero-img:after{content:"";position:absolute;width:74px;height:74px;border-radius:50%;background:var(--sun);left:2%;bottom:-6%;box-shadow:0 0 0 12px #fff}
+section{padding:88px 0}
+.head{text-align:center;margin:0 auto 46px;max-width:720px}.head h2{margin:10px 0 12px}.head p{color:var(--mut)}
+.cats{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.cat{background:#fff;border:0;border-radius:28px;overflow:hidden;text-align:left;transition:.2s;display:block;box-shadow:var(--sh);padding:12px}
+.cat:hover{transform:translateY(-5px)}.cat.on{box-shadow:0 0 0 3px var(--acc),var(--sh)}
+.art{aspect-ratio:4/3;background-repeat:no-repeat;border-radius:20px;position:relative}
+.cat-b{padding:16px 10px 8px;display:flex;justify-content:space-between;align-items:center;gap:10px}.cat-b h3{font-size:25px}.cat-b small{display:block;color:var(--mut);font-size:14px;margin-top:5px}
+.go{flex:none;width:40px;height:40px;border-radius:50%;background:var(--acc);color:#fff;display:grid;place-items:center;font-weight:700}
+.catalog{background:var(--mint)}
+.tools{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:28px}
+.tools input,.tools select{background:#fff;border:0;border-radius:999px;padding:13px 20px;outline:0;font-size:15px;box-shadow:0 4px 14px rgba(16,32,26,.07)}.tools input{flex:1;min-width:220px}.tools select{min-width:190px}
+.count{margin-left:auto;font-weight:700;color:var(--g)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.card{background:#fff;border-radius:28px;display:flex;flex-direction:column;transition:.2s;box-shadow:var(--sh);padding:12px}.card:hover{transform:translateY(-5px)}
+.card .art{aspect-ratio:16/10}
+.tag{position:absolute;left:12px;top:12px;background:#fff;border-radius:99px;padding:3px 12px;font-size:12px;font-weight:700;box-shadow:0 2px 8px #0002}.demo{left:auto;right:12px;background:var(--sun)}
+.card-b{padding:16px 10px 8px;display:flex;flex-direction:column;gap:8px;flex:1}.card-b h3{font-size:27px}.card-b p{color:var(--mut);font-size:15px;flex:1}
+.loc{font-size:14px;font-weight:600;color:var(--acc)}
+.card-f{display:flex;justify-content:space-between;align-items:center;gap:10px;border-top:1.5px dashed #d5e2da;padding-top:14px;margin-top:6px}.card-f small{display:block;color:var(--mut);font-size:12px;line-height:1.3}.card-f b{font-size:15px}
+.card-f .btn{padding:10px 20px;font-size:14px}
+.empty{grid-column:1/-1;text-align:center;padding:50px 20px;background:#fff;border-radius:28px;color:var(--mut)}.empty b{display:block;font:800 30px 'Barlow Condensed',sans-serif;text-transform:uppercase;color:var(--ink);margin-bottom:8px}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:48px;text-align:center}
+.ic{width:72px;height:72px;margin:0 auto 18px;border-radius:50%;background:var(--mint);display:grid;place-items:center;color:var(--acc)}.ic svg{width:34px;height:34px}
+.step h3{font-size:28px;margin-bottom:10px}.step p{color:var(--mut);max-width:310px;margin:auto}
+.about{position:relative;overflow:hidden;background:linear-gradient(115deg,#f1f6f2,#fff 70%)}
+.about-g{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.circ{position:relative;width:min(100%,460px);aspect-ratio:1;margin:0 auto}
+.circ:before{content:"";position:absolute;inset:-9% 14% 14% -26%;border-radius:50%;background:var(--grad)}
+.circ div{position:absolute;inset:6% 0 0 6%;border-radius:50%;background:#fff var(--bgimg) no-repeat;box-shadow:0 24px 60px rgba(8,50,36,.25)}
+.about p{color:var(--mut);margin-top:16px;font-size:17px}.about h2{margin-top:10px}
+.about ul{list-style:none;padding:0;margin:20px 0 28px}.about li{padding:6px 0 6px 32px;position:relative;font-weight:600}.about li:before{content:"✓";position:absolute;left:0;top:7px;width:22px;height:22px;border-radius:50%;background:var(--sun);display:grid;place-items:center;font-size:12px}
+.faq{max-width:780px;margin:0 auto}.faq details{background:#fff;border-radius:20px;box-shadow:var(--sh);padding:18px 24px;margin-bottom:14px}
+.faq summary{font-weight:700;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:14px}.faq summary:after{content:"+";font-size:24px;line-height:1;color:var(--acc)}.faq details[open] summary:after{content:"–"}.faq details p{color:var(--mut);margin-top:10px}
+footer{background:#0a3d2e;color:#cfe4d8;padding:62px 0 26px}
+.foot{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:40px;padding-bottom:36px}.foot .brand{color:#fff}.foot .brand b{color:var(--sun)}.foot p{margin-top:14px;max-width:340px;font-size:15px}
+.foot h4{color:#fff;font-size:14px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:14px}.foot a,.foot span{display:block;margin:8px 0;font-size:15px}.foot a:hover{color:var(--sun)}
+.copy{border-top:1px solid #ffffff30;padding-top:20px;font-size:14px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+.modal{position:fixed;inset:0;background:#0a1f18cc;z-index:60;display:none;align-items:center;justify-content:center;padding:18px}.modal.show{display:flex}
+.box{background:#fff;border-radius:30px;width:min(580px,100%);max-height:92vh;overflow:auto;position:relative;padding:12px}
+.box .art{aspect-ratio:16/8}.box-b{padding:20px 14px 12px}.box-b h3{font-size:36px;margin:4px 0 10px}
+.x{position:absolute;right:22px;top:22px;z-index:2;width:40px;height:40px;border-radius:50%;background:#fff;border:0;box-shadow:0 2px 10px #0003;font-size:22px;line-height:1}
+.info{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:18px 0}.info div{background:var(--mint);border-radius:16px;padding:10px 14px;font-size:13px;color:var(--mut)}.info b{display:block;color:var(--ink);font-size:15px}
+.note{font-size:13px;border-radius:14px;padding:10px 14px;margin-top:14px}.note.warn{background:#fff1d6}
+.acts{display:flex;gap:10px;flex-wrap:wrap}.acts .btn{flex:1}
+.toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,30px);opacity:0;pointer-events:none;background:var(--ink);color:#fff;padding:13px 20px;border-radius:14px;max-width:min(92vw,460px);font-size:14px;z-index:90;transition:.25s}.toast.show{opacity:1;transform:translate(-50%,0)}
+@media(max-width:960px){.hero-grid,.about-g{grid-template-columns:1fr}.cats,.grid{grid-template-columns:repeat(2,1fr)}.blob{width:90vw;top:auto;bottom:-30%;right:-30%}.steps{gap:24px}}
+@media(max-width:700px){.nav>.btn{display:none}.menu{display:grid}.links{display:none;position:absolute;top:76px;left:0;right:0;background:#fff;box-shadow:0 12px 20px #0002;padding:20px;flex-direction:column;gap:16px}.links.open{display:flex}
+.search{grid-template-columns:1fr;border-radius:26px;padding:8px}.search select{border-left:0;border-top:1.5px solid #e1ebe5}section{padding:60px 0}.hero-grid{padding:40px 0 60px}
+.cats,.grid,.steps,.foot{grid-template-columns:1fr}.count{margin-left:0;width:100%}.tools select,.tools input{width:100%}.info{grid-template-columns:1fr}.circ:before{inset:-6% 18% 18% -14%}}
+</style>
+</head>
+<body>
+<header><div class="w nav">
+  <a class="brand" href="#beranda" aria-label="JasaGeutanyou"><svg viewBox="0 0 40 40"><rect width="40" height="40" rx="12" fill="#0b5d43"/><path d="M20 8a8.5 8.5 0 0 0-8.5 8.5C11.5 24 20 32 20 32s8.5-8 8.5-15.5A8.5 8.5 0 0 0 20 8z" fill="#fff"/><path d="M15.5 17l3 3 6-6.5" fill="none" stroke="#0b5d43" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="31" cy="9" r="3.4" fill="#f2b705"/></svg><span>Jasa<b>Geutanyou</b></span></a>
+  <nav class="links" id="links"><a href="#beranda">Beranda</a><a href="#jelajahi">Jelajahi Jasa</a><a href="#cara-kerja">Cara Kerja</a><a href="#tentang">Tentang Kami</a></nav>
+  <button class="btn" onclick="partner()">Daftar sebagai Mitra</button>
+  <button class="menu" id="menu" aria-label="Buka menu"><svg width="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+</div></header>
+
+<main>
+<div class="hero" id="beranda"><div class="blob"></div><div class="w hero-grid">
+  <div>
+    <div class="kick">Katalog jasa lokal Aceh</div>
+    <h1><span class="acc">Butuh Jasa?</span> Temukan Solusinya di Sekitar Anda.</h1>
+    <p class="lead">Temukan berbagai layanan terpercaya untuk kebutuhan sehari-hari. Lebih mudah, praktis, dan dekat dengan Anda.</p>
+    <form class="search" id="heroForm">
+      <input id="hq" placeholder="Cari jasa, mis. cuci AC" aria-label="Cari layanan">
+      <select id="hl" aria-label="Pilih lokasi"></select>
+      <button class="btn" type="submit">Jelajahi Jasa</button>
+    </form>
+    <div class="checks"><span>Tanpa daftar akun</span><span>Langsung ke WhatsApp</span><span>Fokus wilayah Aceh</span></div>
+  </div>
+  <div class="hero-img"><img src="assets/images/ilustrasi-layanan.png" width="1200" height="630" alt="Ilustrasi petugas kebersihan dan teknisi AC yang sedang bekerja"></div>
+</div></div>
+
+<section id="kategori"><div class="w">
+  <div class="head"><div class="kick">Kategori layanan</div><h2>Mau dibantu <span class="acc">apa hari ini?</span></h2><p>Pilih kategori, lalu lihat penyedia jasa di wilayah Anda.</p></div>
+  <div class="cats" id="cats"></div>
+</div></section>
+
+<section class="catalog" id="jelajahi"><div class="w">
+  <div class="head"><div class="kick">Daftar penyedia jasa</div><h2>Jelajahi jasa <span class="acc">di sekitar Anda</span></h2><p>Data di bawah adalah contoh tampilan, bukan mitra asli JasaGeutanyou.</p></div>
+  <div class="tools"><input id="q" placeholder="Cari nama, layanan, atau wilayah" aria-label="Cari"><select id="cf" aria-label="Kategori"><option value="all">Semua kategori</option></select><select id="lf" aria-label="Lokasi"></select><span class="count" id="count"></span></div>
+  <div class="grid" id="grid"></div>
+</div></section>
+
+<section id="cara-kerja"><div class="w">
+  <div class="head"><div class="kick">Cara kerja</div><h2>Tiga langkah, <span class="acc">langsung beres</span></h2><p>Tidak perlu akun. Cukup cari, pilih, lalu chat.</p></div>
+  <div class="steps">
+    <div class="step"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg></div><h3>Cari layanan yang dibutuhkan</h3><p>Ketik kebutuhan Anda atau pilih kategori, lalu atur wilayah di Aceh.</p></div>
+    <div class="step"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7M9.5 8l1.8 1.8L15 6.5"/></svg></div><h3>Pilih penyedia jasa</h3><p>Bandingkan deskripsi, lokasi, jam kerja, dan kisaran harga lewat halaman detail.</p></div>
+    <div class="step"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l1.9-5.4A8.4 8.4 0 1 1 21 11.5z"/><path d="M9 10c.5 2 2 3.5 4 4l1.5-1.2 2 1"/></svg></div><h3>Hubungi lewat WhatsApp</h3><p>Pesan otomatis sudah terisi nama layanan, penyedia, dan lokasi. Tinggal kirim.</p></div>
+  </div>
+</div></section>
+
+<section class="about" id="tentang"><div class="w about-g">
+  <div class="circ" style="--bgimg:url(assets/images/ilustrasi-layanan.png);"><div style="background-size:220% auto;background-position:15% 70%"></div></div>
+  <div><div class="kick">Tentang JasaGeutanyou</div><h2>Jasa lokal jadi <span class="acc">lebih mudah ditemukan</span></h2>
+    <p>“Geutanyoe” berarti “kita” dalam bahasa Aceh. JasaGeutanyou hadir untuk mempermudah masyarakat menemukan layanan lokal, sekaligus membantu penyedia jasa menjangkau pelanggan baru di sekitarnya.</p>
+    <ul><li>Masyarakat: cari jasa dan hubungi penyedia tanpa proses berbelit.</li><li>Penyedia jasa: perkenalkan layanan dan terima pesanan lewat WhatsApp.</li></ul>
+    <button class="btn" onclick="partner()">Daftar sebagai Mitra</button></div>
+</div></section>
+
+<section style="padding-top:20px"><div class="w"><div class="head" style="margin-bottom:30px"><div class="kick">Pertanyaan umum</div><h2>Sebelum <span class="acc">mulai</span></h2></div>
+  <div class="faq">
+    <details><summary>Apakah harus membuat akun?</summary><p>Tidak. Anda bisa menelusuri katalog dan menghubungi penyedia jasa tanpa akun.</p></details>
+    <details><summary>Bagaimana dengan harga dan pembayaran?</summary><p>Harga akhir dan pembayaran disepakati langsung dengan penyedia jasa melalui WhatsApp. Website ini belum memproses pembayaran.</p></details>
+    <details><summary>Apakah penyedia jasa di sini asli?</summary><p>Saat ini daftar yang tampil adalah data contoh untuk pratinjau dan ditandai “Contoh”.</p></details>
+  </div></div></section>
+</main>
+
+<footer><div class="w">
+  <div class="foot">
+    <div><a class="brand" href="#beranda"><span>Jasa<b>Geutanyou</b></span></a><p>Platform katalog dan pemesanan jasa lokal di Aceh. Jasa lokal, lebih dekat.</p></div>
+    <div><h4>Navigasi</h4><a href="#beranda">Beranda</a><a href="#jelajahi">Jelajahi Jasa</a><a href="#cara-kerja">Cara Kerja</a><a href="#tentang">Tentang Kami</a></div>
+    <div><h4>Kontak</h4><span id="fWa"></span><span id="fMail"></span><span>Wilayah layanan: Aceh, Indonesia</span></div>
+  </div>
+  <div class="copy"><span>© 2026 JasaGeutanyou. Seluruh hak dilindungi.</span><span>Dibuat untuk mendukung jasa lokal Aceh.</span></div>
+</div></footer>
+
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="mTitle"><div class="box">
+  <button class="x" id="close" aria-label="Tutup">×</button>
+  <div class="art" id="mArt"></div>
+  <div class="box-b"><div class="kick" id="mCat"></div><h3 id="mTitle"></h3><p id="mDesc" style="color:var(--mut)"></p>
+    <div class="info"><div>Lokasi layanan<b id="mLoc"></b></div><div>Kisaran harga (contoh)<b id="mPrice"></b></div><div>Jam operasional<b id="mHours"></b></div><div>Status data<b>Contoh, bukan mitra asli</b></div></div>
+    <div class="acts"><button class="btn" id="mWa">Pesan via WhatsApp</button><button class="btn out" id="mClose">Tutup</button></div>
+    <div class="note warn" id="mWarn" hidden>Nomor WhatsApp penyedia ini belum dikonfigurasi, jadi tombol belum bisa membuka chat.</div>
+  </div></div></div>
+<div class="toast" id="toast"></div>
+<script>
+// ---- KONFIGURASI: isi dengan nomor asli (format 62812xxxxxxx, tanpa +, spasi, atau strip) ----
+const CONFIG={wa:'',email:''};
+const LOCS=['Banda Aceh','Aceh Besar','Lhokseumawe','Langsa','Bireuen','Pidie','Aceh Utara'];
+const img=n=>`url(assets/images/${n}.svg) center/cover`,png='url(assets/images/ilustrasi-layanan.png)';
+const CATS=[
+{id:'ac',name:'Servis AC',sub:'Cuci, perawatan, perbaikan',bg:png+' 100% 39%/240% auto #fff'},
+{id:'electric',name:'Elektronik & Kelistrikan',sub:'Instalasi dan perbaikan',bg:img('listrik')},
+{id:'clean',name:'Kebersihan Rumah',sub:'Rumah, kos, ruang usaha',bg:png+' 14% 59%/240% auto #fff'},
+{id:'motor',name:'Servis Motor Panggilan',sub:'Datang ke lokasi Anda',bg:img('motor')},
+{id:'plumbing',name:'Plumbing & Perbaikan Pipa',sub:'Keran, saluran, kebocoran',bg:img('pipa')},
+{id:'other',name:'Jasa Lainnya',sub:'Beragam kebutuhan rumah',bg:img('lainnya')}];
+// Data CONTOH untuk tampilan. Ganti dengan data mitra terverifikasi dan isi "wa".
+const P=[
+{n:'Sejuk Teknik AC',c:'ac',l:'Banda Aceh',d:'Kuta Alam',t:'Melayani cuci AC, pengecekan, perawatan berkala, dan perbaikan untuk rumah maupun kantor.',s:'Cuci AC, perbaikan, isi freon',p:'Rp 75.000 – 150.000 / unit',h:'Senin–Sabtu, 08.00–17.00',wa:''},
+{n:'Bersih Rumah Kita',c:'clean',l:'Aceh Besar',d:'Darul Imarah',t:'Kebersihan rumah, kos, dan ruang usaha. Cakupan kerja bisa dibicarakan lebih dulu.',s:'General cleaning, kamar mandi, dapur',p:'Rp 150.000 – 350.000 / kunjungan',h:'Setiap hari, 08.00–16.00',wa:''},
+{n:'Cahaya Teknik Elektrik',c:'electric',l:'Banda Aceh',d:'Syiah Kuala',t:'Pemeriksaan instalasi, pemasangan lampu dan stop kontak, serta perbaikan gangguan listrik rumah.',s:'Instalasi, lampu, stop kontak',p:'Rp 50.000 – 200.000',h:'Senin–Sabtu, 09.00–18.00',wa:''},
+{n:'Bengkel Motor Panggilan',c:'motor',l:'Lhokseumawe',d:'Banda Sakti',t:'Servis ringan dan pemeriksaan motor, termasuk saat darurat di jalan.',s:'Servis ringan, aki, pemeriksaan',p:'Rp 40.000 – 150.000',h:'Setiap hari, 08.00–20.00',wa:''},
+{n:'Solusi Pipa Aceh',c:'plumbing',l:'Bireuen',d:'Kota Juang',t:'Perbaikan keran, saluran air, kebocoran pipa, dan pemasangan perlengkapan sanitasi.',s:'Pipa bocor, keran, saluran',p:'Rp 60.000 – 250.000',h:'Senin–Sabtu, 08.00–17.00',wa:''},
+{n:'Prima AC Lhokseumawe',c:'ac',l:'Lhokseumawe',d:'Muara Dua',t:'Perawatan dan pengecekan AC untuk rumah, kantor, dan tempat usaha.',s:'Cuci AC, pengecekan, perawatan',p:'Rp 70.000 – 140.000 / unit',h:'Senin–Sabtu, 09.00–17.00',wa:''},
+{n:'Bersih Nyaman Langsa',c:'clean',l:'Langsa',d:'Langsa Kota',t:'Jasa kebersihan rumah dan ruang kerja dengan paket yang bisa disesuaikan.',s:'Bersih rumah, ruang kerja, kaca',p:'Rp 120.000 – 300.000',h:'Setiap hari, 08.00–16.00',wa:''},
+{n:'Teknik Listrik Pidie',c:'electric',l:'Pidie',d:'Sigli',t:'Perbaikan kelistrikan rumah, pemasangan perangkat, dan pemeriksaan instalasi dasar.',s:'Perbaikan, instalasi, penerangan',p:'Rp 50.000 – 180.000',h:'Senin–Sabtu, 08.00–17.00',wa:''}];
+const $=id=>document.getElementById(id),cat=id=>CATS.find(c=>c.id===id);
+const opt=(a,all)=>`<option value="all">${all}</option>`+a.map(x=>`<option>${x}</option>`).join('');
+$('hl').innerHTML=opt(LOCS,'Semua wilayah Aceh');$('lf').innerHTML=opt(LOCS,'Semua wilayah Aceh');
+$('cf').insertAdjacentHTML('beforeend',CATS.map(c=>`<option value="${c.id}">${c.name}</option>`).join(''));
+$('cats').innerHTML=CATS.map(c=>`<button class="cat" data-c="${c.id}"><div class="art" style="background:${c.bg} no-repeat"></div><div class="cat-b"><div><h3>${c.name}</h3><small>${c.sub}</small></div><span class="go">→</span></div></button>`).join('');
+function render(){
+  const q=$('q').value.trim().toLowerCase(),cf=$('cf').value,lf=$('lf').value;
+  const r=P.map((p,i)=>({...p,i})).filter(p=>(cf==='all'||p.c===cf)&&(lf==='all'||p.l===lf)&&(!q||[p.n,p.t,p.l,p.d,p.s,cat(p.c).name].join(' ').toLowerCase().includes(q)));
+  $('count').textContent=`${r.length} contoh jasa`;
+  $('grid').innerHTML=r.length?r.map(p=>`<article class="card"><div class="art" style="background:${cat(p.c).bg} no-repeat"><span class="tag">${cat(p.c).name}</span><span class="tag demo">Contoh</span></div><div class="card-b"><div class="loc">📍 ${p.d}, ${p.l}</div><h3>${p.n}</h3><p>${p.t}</p><div class="card-f"><div><small>Kisaran harga</small><b>${p.p}</b></div><button class="btn" onclick="openP(${p.i})">Lihat Detail</button></div></div></article>`).join(''):`<div class="empty"><b>Jasa belum ditemukan</b>Coba ubah kata kunci, kategori, atau wilayah.<br><br><button class="btn" onclick="reset()">Reset pencarian</button></div>`;
+  document.querySelectorAll('.cat').forEach(e=>e.classList.toggle('on',e.dataset.c===cf));
+}
+function reset(){$('q').value='';$('cf').value='all';$('lf').value='all';render()}
+const go=()=>$('jelajahi').scrollIntoView({behavior:'smooth'});
+document.querySelectorAll('.cat').forEach(e=>e.onclick=()=>{$('cf').value=e.dataset.c;render();go()});
+['q','cf','lf'].forEach(id=>$(id).addEventListener(id==='q'?'input':'change',render));
+$('heroForm').onsubmit=e=>{e.preventDefault();$('q').value=$('hq').value;$('lf').value=$('hl').value;render();go()};
+let cur=null;
+function openP(i){cur=P[i];const c=cat(cur.c);$('mArt').style.background=c.bg+' no-repeat';$('mCat').textContent=c.name;$('mTitle').textContent=cur.n;$('mDesc').textContent=cur.t+' Layanan: '+cur.s+'.';$('mLoc').textContent=cur.d+', '+cur.l;$('mPrice').textContent=cur.p;$('mHours').textContent=cur.h;$('mWarn').hidden=!!cur.wa;$('modal').classList.add('show');document.body.style.overflow='hidden'}
+function closeM(){$('modal').classList.remove('show');document.body.style.overflow=''}
+$('close').onclick=$('mClose').onclick=closeM;$('modal').onclick=e=>{if(e.target.id==='modal')closeM()};document.onkeydown=e=>{if(e.key==='Escape')closeM()};
+function toast(m){const t=$('toast');t.textContent=m;t.classList.add('show');clearTimeout(t._h);t._h=setTimeout(()=>t.classList.remove('show'),3800)}
+$('mWa').onclick=()=>{if(!cur.wa){$('mWarn').hidden=false;toast('Nomor WhatsApp belum dikonfigurasi untuk data contoh ini.');return}
+  const m=`Halo ${cur.n}, saya menemukan layanan ${cat(cur.c).name} (lokasi: ${cur.d}, ${cur.l}) melalui JasaGeutanyou. Saya ingin menanyakan jadwal dan estimasi biaya. Terima kasih.`;
+  window.open(`https://wa.me/${cur.wa}?text=${encodeURIComponent(m)}`,'_blank','noopener')};
+function partner(){if(!CONFIG.wa){toast('Nomor WhatsApp pendaftaran mitra belum dikonfigurasi. Isi CONFIG.wa di index.html.');return}
+  window.open(`https://wa.me/${CONFIG.wa}?text=${encodeURIComponent('Halo JasaGeutanyou, saya tertarik mendaftar sebagai mitra penyedia jasa.')}`,'_blank','noopener')}
+$('fWa').textContent='WhatsApp: '+(CONFIG.wa?'+'+CONFIG.wa:'segera tersedia');$('fMail').textContent='Email: '+(CONFIG.email||'segera tersedia');
+$('menu').onclick=()=>$('links').classList.toggle('open');document.querySelectorAll('.links a').forEach(a=>a.onclick=()=>$('links').classList.remove('open'));
+render();
+</script>
+</body>
+</html>
